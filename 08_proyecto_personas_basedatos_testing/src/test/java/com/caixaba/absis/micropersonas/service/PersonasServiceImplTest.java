@@ -50,6 +50,7 @@ class PersonasServiceImplTest {
         verify(personasRepository).findAll();
     }
 
+    
     @Test
     void getPersonaByIdReturnsPersonaWhenExists() {
         PersonaEntity entity = new PersonaEntity();

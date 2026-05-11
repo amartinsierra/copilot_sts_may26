@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.caixaba.absis.micropersonas.exceptions.PersonaAlreadyExistsException;
+import com.caixaba.absis.micropersonas.exceptions.PersonaNotFoundException;
 import com.caixaba.absis.micropersonas.mapper.PersonaMapper;
 import com.caixaba.absis.micropersonas.repository.PersonasRepository;
 import com.capgemini.micropersonas.api.domain.Persona;
@@ -37,7 +39,7 @@ public class PersonasServiceImpl implements PersonasService {
 		//comprueba que no exista una persona con el mismo id si existe genera una excepción PersonaAlreadyExistsException con el id de la persona, si no existe utiliza el repositorio para guardar la persona convertida a PersonaEntity utilizando el mapper y devuélvela convertida a Persona utilizando el mapper
 		//y si no existe la añades y la devuelves
 		if (personasRepository.existsById(persona.getId())) {
-			throw new com.caixaba.absis.micropersonas.exceptions.PersonaAlreadyExistsException(persona.getId());
+			throw new PersonaAlreadyExistsException(persona.getId());
 		} else {
 			return personaMapper.toPersona(personasRepository.save(personaMapper.toPersonaEntity(persona)));
 		}
@@ -52,7 +54,7 @@ public class PersonasServiceImpl implements PersonasService {
 			personasRepository.deleteById(id);
 			return persona;
 		} else {
-			throw new com.caixaba.absis.micropersonas.exceptions.PersonaNotFoundException(id);
+			throw new PersonaNotFoundException(id);
 		}
 	}
 

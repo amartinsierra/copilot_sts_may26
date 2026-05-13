@@ -1,0 +1,15 @@
+Usando get_openapi del servidor MCP, quiero que en el proyecto 02_clienteAlumnos_por_mcp crees un microservicio que, interacionando con la tool , exponga un endpoint que muestre un listado de todos los alumnos por rango de notas. 
+Utiliza RestClient y usa el contrato definido en la tool getOpenapi
+
+Más profesional:
+
+Usa la tool get_openapi del servidor MCP alumnos.
+
+Crea un microservicio Spring Boot llamado formacion-service.
+
+Necesito:
+
+- cliente RestClient para alumnos-service
+- modelo Alumno
+- endpoint GET /formaciones/alumno/{id}
+- usar el contrato OpenAPI obtenido por MCP

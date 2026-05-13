@@ -6,4 +6,5 @@ import com.caixaba.absis.microlibros.entity.LibroEntity;
 
 public interface LibrosRepository extends JpaRepository<LibroEntity, Long> {
     List<LibroEntity> findByPrecioBetween(Double precioMin, Double precioMax);
+    
 }

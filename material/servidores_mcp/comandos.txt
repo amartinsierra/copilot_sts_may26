@@ -1,0 +1,15 @@
+>npm init -y
+
+en package.json cambiar type y poner el valor module
+
+>npm install @modelcontextprotocol/sdk axios
+
+Registrar servidor con:
+
+"alumnos": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "C:/cursos/curso_copilot_backend_tragsa_mayo_2026/servidores_mcp/servidor_alumnos/server.js"
+      ]
+    }

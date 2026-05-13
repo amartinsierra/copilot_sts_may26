@@ -1,0 +1,4 @@
+crea un controlador rest con una implementación por defecto (métodos vacíos) de la interfaz EstudiantesApi
+Implementa el método getEstudiantesByRangeNota, tenrá que llamar a la dirección /alumnos del microservicio de alumnos que devuelve todos los alumnos y cuya dirección base es urlBase. Los resultados tendrán que ser devueltos como Estudiante, donde nota es igual a calificacion. Utiliza RestClient según directrices del skill definido en la subcarpeta de skills
+ahora implementa createEstudiante. Si no puede dar de alta, lanza RuntimeException. Sigue las indicaciones del skill
+Completa los métodos del controller. Inyecta la capa de servicio por constructor
